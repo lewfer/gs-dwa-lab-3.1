@@ -8,6 +8,9 @@ const app = express()
 const port = 8000
 app.use(bodyParser.urlencoded({ extended: true }))
 
+// Set up css
+app.use(express.static(__dirname + '/public'));
+
 // Set the directory where Express will pick up HTML files
 // __dirname will get the current directory
 app.set('views', __dirname + '/views');
